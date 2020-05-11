@@ -1,5 +1,9 @@
 # Install
 
+`git clone https://github.com/Sh1Yo/rate-limit-checker && cd rate-limit-checker && go build rate.go`
+
+or
+
 `go get github.com/Sh1Yo/rate-limit-checker`
 
 # Usage

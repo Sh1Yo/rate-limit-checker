@@ -3,6 +3,9 @@
 `go get github.com/Sh1Yo/rate-limit-checker`
 
 # Usage
+
+```
+
 Usage of rate:
   -X string
         method (default "HEAD")
@@ -14,3 +17,4 @@ Usage of rate:
   -u string
         link
 
+```

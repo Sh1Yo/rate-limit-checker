@@ -23,8 +23,13 @@ func main() {
 	flag.IntVar(&threads, "t", 10, "threads")
 	flag.IntVar(&times, "a", 500, "times")
 	flag.BoolVar(&cont, "s", false, "continue after the code changing")
-	flag.StringVar(&link, "u", "", "link")
+	flag.StringVar(&link, "u", "", "url")
 	flag.Parse()
+
+	if link == "" {
+		fmt.Println("URL was not provided")
+		return
+	}
 
 	req, _ := http.NewRequest(method, link, nil) //,nil
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36")

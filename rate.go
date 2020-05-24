@@ -34,7 +34,7 @@ func main() {
 	req, _ := http.NewRequest(method, link, nil) //,nil
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36")
 	resp, err := (*http.Client).Do(&http.Client{}, req)
-	if err != nil {
+	if err == nil {
 		code = resp.StatusCode
 	} else {
 		fmt.Println(err.Error())

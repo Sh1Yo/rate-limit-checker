@@ -63,11 +63,14 @@ func request(i int) {
 	resp, err := client.Do(req)
 	if err != nil {
 		println(err.Error())
+		return
 	}
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		println(err.Error())
 	}
+	resp.Body.Close()
+
 	fmt.Println(i, resp.StatusCode, len(body))
 	if code != resp.StatusCode && !cont {
 		os.Exit(5)

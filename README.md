@@ -1,3 +1,5 @@
+![preview](https://repository-images.githubusercontent.com/262951377/b248f480-936f-11ea-8cb7-ccd94da1fb2e)
+
 # Install
 
 `git clone https://github.com/Sh1Yo/rate-limit-checker && cd rate-limit-checker && go build rate.go`
